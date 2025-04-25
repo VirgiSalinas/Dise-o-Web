@@ -1,38 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #bfd8af;
+  background-color: #e7f0dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* 🔒 Esto oculta el scroll horizontal */
 }
 
 header {
   background-color: #99bc85;
   width: 100%;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
+.nav-menu {
+  list-style: none;
+  margin: 0 auto;
   padding: 0;
-  overflow: hidden;
-  background-color: #99bc85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #000;
-  text-align: center;
-  padding: 14px 16px;
+.nav-link {
+  color: #1a3c14;
   text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  position: relative;
 }
 
-li a:hover:not(.active) {
-  background-color: #bfd8af;
+.nav-link:hover {
+  background-color: #e7f0dc;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #1a3c14;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+.contact-link {
+  background-color: #e7f0dc;
+  padding: 8px 20px;
+  margin-left: 20px;
+}
+
+.contact-link:hover {
+  background-color: #d4e3c5;
 }
 
 .hero {
@@ -41,6 +82,7 @@ li a:hover:not(.active) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .wellcome {
@@ -56,113 +98,361 @@ h1 {
   font-size: 65px;
 }
 
-.aboutme {
-  gap: 40px;
+.about-section {
+  padding: 60px 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin: 0 auto 40px;
+  border-radius: 3px;
+}
+
+.about-content {
   display: flex;
-  align-items: stretch;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+  gap: 40px;
+  align-items: center;
 }
 
-.fotocv {
-  width: 25%;
-  height: fit-content;
+.about-text {
+  flex: 1;
 }
 
-.card img.fotocv {
-    align-self: center;
-    margin-bottom: 20px;
-  }
+.highlight-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #444;
+}
 
-.h2me,
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 45%;
+.highlight-text span {
+  color: #6a11cb;
+  font-weight: 600;
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-list li {
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  background-color: white;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 20px;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
 }
 
-.h2me:hover,
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.styled-list li:hover {
+  transform: translateX(5px);
 }
 
-.container {
+.list-icon {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  min-width: 30px;
   text-align: center;
   padding: 2px 16px;
 }
 
-.contact {
+.fotocv img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #597445;
-  border-radius: 10px;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 20px;
-  background-color: #bfd8af;
+  align-items: flex-start;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  align-items: center;
+/* empieza cards*/
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.send {
-  background-color: #99bc85;
-  border: solid;
-  border-radius: 15px;
-  color: #000;
-  padding: 15px 32px;
+.skill-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 30px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Asegura misma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f0dc;
+  overflow: hidden;
+}
+
+.skill-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skill-description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* hasta aca es el card*/
+/* galeria*/
+
+.portfolio-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%; /* Asegura misma altura */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(153, 188, 133, 0.9);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+.item-title {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.view-button {
+  background-color: white;
+  color: #99bc85;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #e7f0dc;
+  transform: scale(1.05);
+}
+
+/* Estilo base para ambas secciones */
+.skills-section,
+.portfolio-section {
+  padding: 60px 20px;
   text-align: center;
-  text-decoration: none;
-  display: inline-flex;
-  font-size: 16px;
-  margin-top: 2%;
-  margin-bottom: 10%;
 }
 
-input {
-  padding: 8px 12px;
-  font-size: 16px;
+.section-header,
+.portfolio-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.section-title,
+.portfolio-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-divider,
+.portfolio-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #99bc85, #6a8c5e);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.section-subtitle,
+.portfolio-subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contenedores grid unificados */
+.skills-container,
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Imágenes con proporción consistente */
+.skill-icon,
+.item-image img {
+  width: 100%;
+  height: 200px; /* Misma altura para todas las imágenes */
+  object-fit: contain; /* o 'contain' según prefieras */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact-header {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.contact-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #99bc85, #6a8c5e);
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.contact-subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.95rem;
   border: 1px solid #e0fbe2;
-  border-radius: 6px;
+  border-radius: 8px;
+  background-color: #f8faf7;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #99bc85;
+  box-shadow: 0 0 0 3px rgba(153, 188, 133, 0.2);
   outline: none;
   width: 50%;
   box-sizing: border-box;
 }
 
-textarea {
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #e0fbe2;
-  border-radius: 6px;
-  outline: none;
-  width: 50%;
-  box-sizing: border-box;
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
+.submit-button {
+  background-color: #99bc85;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #7fa56d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 footer {
   display: flex;
   justify-content: space-around;
   background-color: #99bc85;
-  padding: 50px;
+  padding: 1%;
   width: 100%;
 }
 
-.socialred{
+.socialred {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,30 +467,86 @@ footer {
   font-size: 16px;
 }
 
-.fa-instagram{
+.fa-instagram {
   width: 25px;
 }
 
-.fa-google{
+.fa-google {
   width: 25px;
 }
 
-@media (min-width: 100px) {
-}
+/* Estilos base (Mobile First) */
+/* Todos tus estilos normales van aquí */
 
+/* Media Queries reorganizadas */
+
+/* Pantallas pequeñas (hasta 350px) */
 @media (max-width: 350px) {
-  .buttonnav {
-    display: flex;
-    flex-direction: column;
+  /* Estilos específicos para móviles muy pequeños */
+}
+
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+  .nav-menu {
+    gap: 10px;
+    padding: 0 10px;
   }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
+    height: auto;
+    padding: 20px 0;
   }
-  footer{
-    display: flex;
+
+  .about-content {
     flex-direction: column;
   }
+
+  .skills-container,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .socialred {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+  }
+}
+
+/* Tablets (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  .skills-container,
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
   .aboutme{
     display: flex;
     flex-direction: column;
@@ -214,42 +560,43 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-}
 
-
-@media (min-width: 351px) {
-}
-
-@media (max-width: 650px) {
-  .buttonnav {
-    display: flex;
-    flex-direction: column;
+  .contact-form {
+    max-width: 80%;
   }
+}
+
+
+
+/* Pantallas medianas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  .skills-container,
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .hero {
-    display: flex;
-    flex-direction: column;
-  }
-  footer{
-    display: flex;
-    flex-direction: column;
-  }
-  .aboutme{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header, footer {
-    width: 100%;
-  }
-  .socialred{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 400px;
   }
 }
 
-@media (min-width: 651px) {
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-@media (max-width: 4000px) {
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }

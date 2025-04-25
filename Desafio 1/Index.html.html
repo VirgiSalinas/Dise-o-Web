@@ -11,21 +11,23 @@
     />
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
   </head>
 
   <body>
+    <!-- Header con navbar -->
     <header>
-      <ul>
-        <li><a href="#home">Inicio</a></li>
-        <li><a href="#aboutme">Sobre mi</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li style="float: right">
-          <a class="active" href="#contact">Contacto</a>
-        </li>
-      </ul>
-    </header>
+      <nav>
+          <ul class="nav-menu">
+              <li><a href="#home" class="nav-link">Inicio</a></li>
+              <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+              <li><a href="#Portfolio" class="nav-link">Portfolio</a></li>
+              <li><a href="#contact" class="nav-link contact-link">Contacto</a></li>
+          </ul>
+      </nav>
+  </header>
+    <!-- Hero -->
     <section id="home" class="hero">
       <img class="imghero" src="images/imagehero2.png" />
       <div class="wellcome">
@@ -33,49 +35,168 @@
         <p>Explora mi trabajo y habilidades</p>
       </div>
     </section>
-    <section class="aboutme" id="aboutme">
-      <div class="h2me">
-        <h2>Sobre mi</h2>
-        <p>
-          Me llamo Virginia Salinas, tengo 27 años. Vivo en Corrientes capital.
-        </p>
-        <p>Mis habilidades:</p>
-        <p>
-          Trabajo en equipo. Trabajo bajo presión. Facilidad de palabra.
-          Ordenada. Adaptabilidad al cambio. Proactiva. Calidad en el trabajo.
-          Orientación al cliente. Sentido de urgencia. Gestión de redes sociales
-          (Community Manager). Creación de contenido digital. Atención al
-          cliente y comunicación efectiva. Resolución de problemas y pensamiento
-          creativo
-        </p>
+    <!-- Algo sobre mi -->
+    <section class="about-section" id="sobre-mi">
+      <div class="about-container">
+          <h2 class="section-title">Sobre mí</h2>
+          <div class="divider"></div>
+          
+          <div class="about-content">
+              <div class="about-text">
+                  <p class="highlight-text">Me llamo <span>Virginia Salinas</span>, tengo <span>27 años</span> y vivo en <span>Corrientes capital</span>.</p>
+                  
+                  <ul class="styled-list">
+                      <li>
+                          <span class="list-icon">📚</span>
+                          <span>Estoy realizando un curso sobre UX/UI</span>
+                      </li>
+                      <li>
+                          <span class="list-icon">🐾</span>
+                          <span>Tengo una gata que se llama Daenerys</span>
+                      </li>
+                      <li>
+                          <span class="list-icon">🎥</span>
+                          <span>Me gusta mucho mirar películas y series</span>
+                      </li>
+                      <li>
+                          <span class="list-icon">👩‍❤️‍👨</span>
+                          <span>Miro mucho anime con mi novio</span>
+                      </li>
+                      <li>
+                          <span class="list-icon">🌶️</span>
+                          <span>Me gusta comer variado, si es picante mejor</span>
+                      </li>
+                  </ul>
+              </div>
+      <div class="fotocv">
+        <img src="images/fotocv-removebg-preview.png" />
       </div>
+    </section>
+    <!-- Cards con mis habilidades -->
+    <section class="skills-section">
+      <div class="section-header">
+          <h2 class="section-title">Habilidades</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">Estas son mis principales competencias profesionales</p>
+      </div>
+  
+      <div class="skills-container">
+          <article class="skill-card">
+              <div class="card-icon">
+                  <img src="images/comunicacion.jpg" alt="Comunicación" class="skill-icon">
+              </div>
+              <h3 class="skill-title">Comunicación Efectiva</h3>
+              <p class="skill-description">Ser clara, concisa, empática y abierta a la retroalimentación.</p>
+          </article>
+  
+          <article class="skill-card">
+              <div class="card-icon">
+                  <img src="images/trabajo en equipo.jpg" alt="Trabajo en equipo" class="skill-icon">
+              </div>
+              <h3 class="skill-title">Trabajo en Equipo</h3>
+              <p class="skill-description">Me gusta colaborar con otros, aportar lo que sé y también aprender de los demás.</p>
+          </article>
+  
+          <article class="skill-card">
+              <div class="card-icon">
+                  <img src="images/proactividad.jpg" alt="Proactividad" class="skill-icon">
+              </div>
+              <h3 class="skill-title">Proactiva</h3>
+              <p class="skill-description">Me gusta estar atenta a los detalles, proponer ideas y asumir responsabilidades con compromiso.</p>
+          </article>
+      </div>
+  </section>
+    <!-- Galeria con mis trabajos de diseño grafico -->
+    <section class="portfolio-section" id="Portfolio">
+      <div class="portfolio-header">
+          <h2 class="portfolio-title">Portfolio</h2>
+          <div class="portfolio-divider"></div>
+          <p class="portfolio-subtitle">Mis proyectos y trabajos destacados</p>
+      </div>
+  
+      <div class="portfolio-grid">
+          <div class="portfolio-item">
+              <div class="item-image">
+                  <img src="images/1.png" alt="Emprendimiento Cositas Ricas">
+              </div>
+              <div class="item-overlay">
+                  <h3 class="item-title">Emprendimiento @cositasricas.rcia</h3>
+                  <button class="view-button">Ver Proyecto</button>
+              </div>
+          </div>
+  
+          <div class="portfolio-item">
+              <div class="item-image">
+                  <img src="images/2.png" alt="Emprendimiento Cositas Ricas">
+              </div>
+              <div class="item-overlay">
+                  <h3 class="item-title">Emprendimiento @cositasricas.rcia</h3>
+                  <button class="view-button">Ver Proyecto</button>
+              </div>
+          </div>
+  
+          <div class="portfolio-item">
+              <div class="item-image">
+                  <img src="images/3.png" alt="Emprendimiento Cositas Ricas">
+              </div>
+              <div class="item-overlay">
+                  <h3 class="item-title">Emprendimiento @cositasricas.rcia</h3>
+                  <button class="view-button">Ver Proyecto</button>
+              </div>
+          </div>
+  
+          <div class="portfolio-item">
+              <div class="item-image">
+                  <img src="images/comida fusión.png" alt="Actividad de secundario">
+              </div>
+              <div class="item-overlay">
+                  <h3 class="item-title">Actividad de secundario</h3>
+                  <button class="view-button">Ver Proyecto</button>
+              </div>
+          </div>
+  
+          <div class="portfolio-item">
+              <div class="item-image">
+                  <img src="images/elary3d.png" alt="Juegos 3D">
+              </div>
+              <div class="item-overlay">
+                  <h3 class="item-title">Emprendimiento de juegos 3D</h3>
+                  <button class="view-button">Ver Proyecto</button>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="contact-section" id="contact">
+    <div class="contact-header">
+        <h2 class="contact-title">Contacto</h2>
+        <div class="contact-divider"></div>
+        <p class="contact-subtitle">¿Tienes alguna pregunta o proyecto en mente? Escríbeme</p>
+    </div>
 
-      <div class="card">
-        <img
-          class="fotocv"
-          src="images/fotocv-removebg-preview.png"
-          alt="Avatar"
-          style="width: 50%"
-        />
-        <div class="container">
-          <h4><b>Virginia Salinas</b></h4>
-          <p>Programadora</p>
+    <form class="contact-form" method="post">
+        <div class="form-group">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" id="name" name="Nombre" class="form-input" required>
         </div>
-      </div>
-    </section>
-    <section class="contact">
-      <h2 id="contact">Contacto</h2>
-      <form action="#" method="post">
-        <label>Nombre</label
-        ><input type="text" id="name" name="Nombre" required />
-        <label>Apellido</label
-        ><input type="text" id="lastname" name="Apellido" required />
-        <label>Mail</label><input type="text" id="mail" name="Mail" required />
-        <label for="masagge">Mensaje</label
-        ><textarea id="mesagge" name="name" required></textarea>
-      </form>
-      <button class="send">Enviar</button>
-    </section>
+        
+        <div class="form-group">
+            <label for="lastname" class="form-label">Apellido</label>
+            <input type="text" id="lastname" name="Apellido" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mail" class="form-label">Mail</label>
+            <input type="email" id="mail" name="Mail" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea id="message" name="message" class="form-textarea" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">Enviar Mensaje</button>
+    </form>
+</section>
     <footer>
       <p>&copy; 2025 Mi Portfolio. Derechos reservados</p>
       <div class="socialred">
