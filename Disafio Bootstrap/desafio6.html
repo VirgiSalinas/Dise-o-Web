@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <title>Desafio 6</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #CDC1FF;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <!-- Botón hamburguesa mejorado -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="bi bi-list" style="font-size: 1.8rem; color: white;"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fw-medium px-3 py-2 rounded"
+              style="color: #4a148c; background-color: rgba(255,255,255,0.2);" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 py-2 rounded" style="color: #4a148c;" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 py-2 rounded" style="color: #4a148c;" href="#sobre-mi">Sobre mi</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-purple text-white px-4" style="background-color: #7e57c2;"
+              href="#contacto">Contáctame</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="py-5 bg-purple-50">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Columna de texto -->
+        <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+          <h1 class="display-4 fw-bold mb-4 text-purple-800">Bienvenidos a mi Portfolio</h1>
+          <p class="lead mb-4 text-purple-700">En este trabajo muestro como aprendo y trabajo con Bootstrap</p>
+          <button class="btn btn-lg px-4 text-white" style="background-color: #b39ddb">Contactame</button>
+        </div>
+
+        <!-- Columna de imagen -->
+        <div class="col-lg-6">
+          <img src="imagen/imagenhero.webp" alt="Imagen descriptiva" class="img-fluid rounded"
+            style="border: 8px solid #d1c4e9">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sección Carrusel -->
+  <section id="portfolio" class="py-5 bg-purple-50">
+    <div class="container">
+      <h2 class="text-center mb-5 text-purple-800">Portfolio</h2>
+
+      <div id="pastelCarousel" class="carousel slide carousel-fade bg-white p-2 rounded-4 shadow"
+        data-bs-ride="carousel">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#pastelCarousel" data-bs-slide-to="0"
+            class="active bg-purple-600"></button>
+          <button type="button" data-bs-target="#pastelCarousel" data-bs-slide-to="1" class="bg-purple-600"></button>
+          <button type="button" data-bs-target="#pastelCarousel" data-bs-slide-to="2" class="bg-purple-600"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner rounded-3 overflow-hidden">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center" style="height: 60vh;">
+              <img src="imagen/2...png" class="w-100" style="object-fit: contain;" alt="@cositasricas.rcia">
+            </div>
+            <div class="carousel-caption bg-purple-200 rounded-3 p-2 p-md-3 text-purple-900">
+              <h5 style="color: #000;">@cositasricas.rcia</h5>
+              <p class="mb-0 d-none d-sm-block" style="color: #000;">Hice imagenes para esta cuenta que es sobre
+                comidas, con Canva.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center" style="height: 60vh;">
+              <img src="imagen/Flayer hamburguesa 3-4.jpg" class="w-100" style="object-fit: contain;"
+                alt="Curso Diseño Grafico">
+            </div>
+            <div class="carousel-caption bg-purple-200 rounded-3 p-2 p-md-3 text-purple-900">
+              <h5 style="color: #000;">Curso Diseño Grafico</h5>
+              <p class="mb-0 d-none d-sm-block" style="color: #000;">Flayer hecho con Adobe Photoshop.</p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center" style="height: 60vh;">
+              <img src="imagen/comida fusión.png" class="w-100" style="object-fit: contain;"
+                alt="Activdad para secundario">
+            </div>
+            <div class="carousel-caption bg-purple-200 rounded-3 p-2 p-md-3 text-purple-900">
+              <h5 style="color: #000;">Actividad para Secundario</h5>
+              <p class="mb-0 d-none d-sm-block" style="color: #000;">Hecho con Canva, pedido por una profesora de
+                historia para actividad patria.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#pastelCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-purple-600 rounded-circle p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pastelCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-purple-600 rounded-circle p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+
+  </section>
+
+  <!-- Sección Sobre Mí -->
+  <section id="sobre-mi" class="py-5">
+    <div class="container">
+      <!-- Título -->
+      <h2 class="text-center mb-4 text-purple-dark fw-bold">Sobre mí</h2>
+
+      <!-- Introducción -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <p class="lead text-purple-dark">Hola soy Virginia, tengo 27 años y estoy haciendo este curso de UX/UI y ahora
+            estoy aprendiendo usar Bootstrap</p>
+        </div>
+      </div>
+
+      <!-- Cards de Habilidades -->
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-habilidad shadow-sm bg-white">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-ear-fill icono-habilidad"></i>
+              <h5 class="card-title text-purple-dark fw-bold">Escucha activa</h5>
+              <p class="card-text text-muted">Atender y considerar el feedback de usuarios, compañeros y líderes de
+                equipo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-habilidad shadow-sm bg-white">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-lightbulb-fill icono-habilidad"></i>
+              <h5 class="card-title text-purple-dark fw-bold">Resolución de problemas</h5>
+              <p class="card-text text-muted">Buscar soluciones simples y funcionales ante desafíos complejos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-habilidad shadow-sm bg-white">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-people-fill icono-habilidad"></i>
+              <h5 class="card-title text-purple-dark fw-bold">Colaboración en equipo</h5>
+              <p class="card-text text-muted">Trabajar con diseñadores, developers, producto, etc., de forma abierta y
+                respetuosa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-habilidad shadow-sm bg-white">
+            <div class="card-body text-center p-4">
+              <i class="bi bi-rocket-takeoff-fill icono-habilidad"></i>
+              <h5 class="card-title text-purple-dark fw-bold">Proactividad</h5>
+              <p class="card-text text-muted">Tomar iniciativa para aprender, proponer ideas o pedir ayuda cuando se
+                necesita.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-4" style="background-color: #f3e5f5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card border-0 shadow-lg rounded-4 overflow-hidden ">
+            <div class="row g-0">
+              <!-- Columna de Contenido - Formulario de Contacto -->
+              <div class="card-body p-4 p-md-5">
+                <form class="needs-validation" novalidate>
+                  <div class="mb-4">
+                    <!-- Título del formulario -->
+                    <h3 class=" text-center text-purple-800 mb-4">Contáctame</h3>
+
+                    <!-- Campo para el nombre -->
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label text-purple-700">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
+
+                    <!-- Campo para el apellido -->
+                    <div class="mb-3">
+                      <label for="apellido" class="form-label text-purple-700">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" required>
+                    </div>
+
+                    <!-- Campo para el email -->
+                    <div class="mb-3">
+                      <label for="email" class="form-label text-purple-700">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+
+                    <!-- Campo para el mensaje -->
+                    <div class="mb-4 p-3 rounded-3" style="background-color: #ede7f6">
+                      <label for="mensaje" class="form-label text-purple-700">Mensaje</label>
+                      <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="mt-auto">
+                    <!-- Botón de enviar -->
+                    <div class="text-center">
+                      <button type="submit" class="btn text-white px-4 py-2" style="background-color: #7e57c2">
+                        <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+                      </button>
+                    </div>
+
+                    <!-- Texto opcional adicional -->
+                    <p class="text-center text-purple-600 small mt-3 mb-0">
+                      <i class="bi bi-envelope"></i> Responderé a la brevedad
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+   <footer class="footer-purple">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0">© 2025 Mi Portfolio. Derechos reservados</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="mailto:virgisalinas5@gmail.com" class="footer-link me-3">
+                    <i class="bi bi-envelope-fill social-icon"></i> virgisalinas5@gmail.com
+                </a>
+                <a href="https://instagram.com/virgisalinas5" target="_blank" class="footer-link">
+                    <i class="bi bi-instagram social-icon"></i> @virgisalinas5
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
